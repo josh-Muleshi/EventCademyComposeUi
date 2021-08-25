@@ -2,13 +2,15 @@ package com.example.eventcademycomposeui.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xff505cf3) //0xFFBB86FC
-val Purple500 = Color(0xff505cf3) //0xFF6200EE
-val Purple700 = Color(0xff505cf3) //0xFF3700B3
+val Purple200 = Color(0xff6553D5) //0xFFBB86FC
+val Purple500 = Color(0xff6553D5) //0xFF6200EE
+val Purple700 = Color(0xff6553D5) //0xFF3700B3
 val Teal200 = Color(0xFF03DAC5)
 val TextWhite = Color(0xffeeeeee)
+val TextsubWhite = Color(0xFFCACACA)
 val DeepBlue = Color(0xff06164c)
-val ButtonBlue = Color(0xff505cf3)
+val ButtonBlue = Color(0xff6553D5)
+val BlueGradient = Color(0xff8E67D5)
 val DarkerButtonBlue = Color(0xff565894)
 val LightRed = Color(0xfffc879a)
 val AquaBlue = Color(0xff9aa5c4)

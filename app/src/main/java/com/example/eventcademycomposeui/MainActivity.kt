@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.eventcademycomposeui.ui.HomeScreen
 import com.example.eventcademycomposeui.ui.theme.EventCademyComposeUiTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,24 +16,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EventCademyComposeUiTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                HomeScreen()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun MyAppPreview() {
     EventCademyComposeUiTheme {
-        Greeting("Android")
+        HomeScreen()
     }
 }
