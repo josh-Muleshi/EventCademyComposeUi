@@ -2,6 +2,7 @@ package com.example.eventcademycomposeui.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
@@ -51,7 +52,7 @@ fun HeadSection(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(15.dp)
-                .padding(top = 40.dp, bottom = 40.dp)
+                .padding(top = 10.dp, bottom = 40.dp)
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -61,7 +62,7 @@ fun HeadSection(
                         .padding(2.dp)
                         .clip(CircleShape)
                         .size(width = 40.dp, height = 40.dp)
-
+                        .border(width = 3.dp, color = Color.White, shape = CircleShape)
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.ic_profil),
@@ -70,7 +71,7 @@ fun HeadSection(
                 }
                 Column(
                     verticalArrangement = Arrangement.Center,
-                    modifier = Modifier.padding(top = 40.dp)
+                    modifier = Modifier.padding(top = 30.dp)
                 ) {
                     Text(
                         text = "Welcome back,",
@@ -89,6 +90,7 @@ fun HeadSection(
                     .padding(2.dp)
                     .clip(CircleShape)
                     .size(width = 50.dp, height = 50.dp)
+                    .border(width = 3.dp, color = Color.White, shape = CircleShape)
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_profil),
