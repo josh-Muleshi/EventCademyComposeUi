@@ -21,6 +21,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+@Composable
+fun MyBottomNavigationBar(){
+    //val navController = rememberNavc
+}
 
 @Preview(showBackground = true)
 @Composable
