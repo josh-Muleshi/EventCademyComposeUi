@@ -16,11 +16,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.eventcademycomposeui.R
 import com.example.eventcademycomposeui.ui.theme.*
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(navController: NavController?){
     Box(
         modifier = Modifier
             .background(Color.Transparent)
