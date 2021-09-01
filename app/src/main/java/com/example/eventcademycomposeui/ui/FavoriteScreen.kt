@@ -8,17 +8,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavController
 
 @Composable
-fun FavoriteScreen(navController: NavController){
+fun FavoriteScreen(){
     Box(
         modifier = Modifier
             .background(Color.Transparent)
             .fillMaxSize()
     ){
         Column {
-            Text(text = "Salut")
+            Text(text = "Favorite")
         }
     }
 }

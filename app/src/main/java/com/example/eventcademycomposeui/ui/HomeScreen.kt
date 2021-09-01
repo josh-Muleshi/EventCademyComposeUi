@@ -21,7 +21,7 @@ import com.example.eventcademycomposeui.R
 import com.example.eventcademycomposeui.ui.theme.*
 
 @Composable
-fun HomeScreen(navController: NavController?){
+fun HomeScreen(){
     Box(
         modifier = Modifier
             .background(Color.Transparent)

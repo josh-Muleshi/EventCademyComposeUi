@@ -14,13 +14,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.eventcademycomposeui.ui.FavoriteScreen
-import com.example.eventcademycomposeui.ui.HomeScreen
-import com.example.eventcademycomposeui.ui.Screen
+import com.example.eventcademycomposeui.ui.*
 import com.example.eventcademycomposeui.ui.theme.EventCademyComposeUiTheme
 
 
@@ -29,7 +28,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EventCademyComposeUiTheme {
-                HomeScreen(null)
                 MyBottomNavigationBar()
             }
         }
@@ -46,7 +44,7 @@ fun MyBottomNavigationBar(){
                 val currentDestination = navBackStackEntry?.destination
                 items.forEach { screen ->
                     BottomNavigationItem(
-                        icon = { Icon(Icons.Filled.Favorite, contentDescription = null) },
+                        icon = { Icon(screen.icon, contentDescription = stringResource(screen.resourceId))},
                         label = { Text(stringResource(screen.resourceId)) },
                         selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                         onClick = {
@@ -70,19 +68,38 @@ fun MyBottomNavigationBar(){
         }
     ) { innerPadding ->
         NavHost(navController, startDestination = Screen.Profile.route, Modifier.padding(innerPadding)) {
-            composable(Screen.Home.route) { HomeScreen(navController) }
-            composable(Screen.Favorite.route) { FavoriteScreen(navController) }
-            /*composable(Screen.Notification.route) { Screen.Profile(navController) }
-            composable(Screen.Profile.route) { Screen.Profile(navController) }*/
+            composable(Screen.Home.route) { Home(navController) }
+            composable(Screen.Favorite.route) { Favorite(navController) }
+            composable(Screen.Notification.route) { Notification(navController) }
+            composable(Screen.Profile.route) { Profile(navController) }
         }
     }
+}
+
+@Composable
+fun Home(navController: NavHostController) {
+    HomeScreen()
+}
+
+@Composable
+fun Favorite(navController: NavHostController) {
+    FavoriteScreen()
+}
+
+@Composable
+fun Notification(navController: NavHostController) {
+    NotificationScreen()
+}
+
+@Composable
+fun Profile(navController: NavHostController) {
+    ProfileScreen()
 }
 
 @Preview(showBackground = true)
 @Composable
 fun MyAppPreview() {
     EventCademyComposeUiTheme {
-        HomeScreen(null)
         MyBottomNavigationBar()
     }
 }
