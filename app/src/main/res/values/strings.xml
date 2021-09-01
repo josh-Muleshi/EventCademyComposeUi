@@ -4,4 +4,5 @@
     <string name="favorite">Favorite</string>
     <string name="notification">Notifications</string>
     <string name="profile">Profile</string>
+    <string name="KEY_ROUTE">route</string>
 </resources>
