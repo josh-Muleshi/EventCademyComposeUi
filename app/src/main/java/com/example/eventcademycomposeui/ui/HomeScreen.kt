@@ -2,6 +2,7 @@ package com.example.eventcademycomposeui.ui
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Divider
 import androidx.compose.material.Icon
@@ -32,18 +33,14 @@ fun HomeScreen(){
 
 @Composable
 fun MyRecyclerView(){
-    val scrollState = rememberScrollState()
-    Column(
-        modifier = Modifier.verticalScroll(scrollState)
-    ) {
-        for (i in 1..100){
+    LazyColumn{
+        items(100){
             Text(
-                text = "User name $i",
+                text = "User name $it",
                 style = MaterialTheme.typography.h3,
                 modifier = Modifier.padding(10.dp)
             )
             Divider(color = Color.Black, thickness = 3.dp)
         }
     }
-
 }
