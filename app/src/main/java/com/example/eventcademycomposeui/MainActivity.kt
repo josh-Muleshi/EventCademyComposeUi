@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EventCademyComposeUiTheme {
-                HomeScreen()
+                HomeScreen(this)
             }
         }
     }
@@ -79,7 +79,7 @@ fun MyBottomNavigationBar(){
 
 @Composable
 fun Home(navController: NavHostController) {
-    HomeScreen()
+    //HomeScreen()
 }
 
 @Composable
@@ -102,7 +102,7 @@ fun Profile(navController: NavHostController) {
 fun MyAppPreview() {
     EventCademyComposeUiTheme {
         Column {
-            HomeScreen()
+            //HomeScreen(this)
         }
     }
 }

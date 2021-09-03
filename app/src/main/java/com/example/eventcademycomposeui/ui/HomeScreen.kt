@@ -1,5 +1,6 @@
 package com.example.eventcademycomposeui.ui
 
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -11,20 +12,21 @@ import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(context: Context){
     Box(
         modifier = Modifier
             .background(Color.Transparent)
             .fillMaxSize()
     ){
         MyRecyclerView{
-            //Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
         }
     }
 }
