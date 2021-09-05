@@ -23,6 +23,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.eventcademycomposeui.ui.*
 import com.example.eventcademycomposeui.ui.theme.EventCademyComposeUiTheme
 
+/*
+*
+* @package com.example.eventcademycomposeui
+* @author josh-Muleshi <jmuleshi2@gmail.com>
+* **/
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
